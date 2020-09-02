@@ -5,7 +5,7 @@ name = "ejb"
 config :libcluster,
   topologies: [
     nook_book: [
-      strategy: Cluster.Strategy.Empd,
+      strategy: Cluster.Strategy.Epmd,
       config: [
         hosts: [
           :"nook_book@10.0.1.5",
