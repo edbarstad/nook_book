@@ -15,7 +15,10 @@ config :libcluster,
     ]
   ]
 
-config :nook_book, cluster_role: System.get_env("CLUSTER_ROLE", "member") |> String.to_atom()
+config :nook_book,
+  cluster_role: System.get_env("CLUSTER_ROLE", "member") |> String.to_atom(),
+  base_uri: "http://#{name}.nookbook.online"
+
 
 config :nook_book, NookBookWeb.Endpoint,
   server: true,
